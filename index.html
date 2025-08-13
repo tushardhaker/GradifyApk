@@ -145,24 +145,42 @@
 
         .install-btn {
             display: inline-block;
-            padding: 0.85rem 2rem;
+            padding: 0.75rem 2rem;
             margin: 0.5rem 0.3rem;
-            font-size: 1rem;
-            color: white;
-            background: linear-gradient(135deg, #6366f1, #3b82f6);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(270deg, #00b894, #55efc4, #00b894);
+            background-size: 600% 600%;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: gradientShift 8s ease infinite;
         }
 
         .install-btn:hover {
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.5);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
 
         .screenshots {
             display: flex;
@@ -277,7 +295,11 @@
                 <p class="meta"><strong>Academic Dashboard for Students, Faculty, and HOD</strong></p>
                 <p class="developers"><strong>Developers: Tushar Dhaker & Puneet Agrawal</strong></p>
 
-                <a href="#" class="install-btn">📦 Download App</a>
+                <a href="https://github.com/tushardhaker/GradifyApk/releases/download/v1.0-debug/app-debug.apk"
+                    class="install-btn" target="_blank" rel="noopener noreferrer">
+                    📦 Download App
+                </a>
+
             </div>
         </div>
 
